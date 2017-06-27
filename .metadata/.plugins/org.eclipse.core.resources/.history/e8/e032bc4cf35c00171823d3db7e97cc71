@@ -1,0 +1,9 @@
+package redbusWebsiteCalls;
+
+import org.testng.annotations.Test;
+
+public class HomePageCalls {
+  @Test
+  public void f() {
+  }
+}
