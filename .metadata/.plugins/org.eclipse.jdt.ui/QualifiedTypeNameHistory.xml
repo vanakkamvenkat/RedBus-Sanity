@@ -6,4 +6,16 @@
 <fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeDriver"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.firefox.FirefoxDriver"/>
 <fullyQualifiedTypeName name="io.github.bonigarcia.wdm.ChromeDriverManager"/>
+<fullyQualifiedTypeName name="io.github.bonigarcia.wdm.FirefoxDriverManager"/>
+<fullyQualifiedTypeName name="io.github.bonigarcia.wdm.InternetExplorerDriverManager"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.ie.InternetExplorerDriver"/>
+<fullyQualifiedTypeName name="io.github.bonigarcia.wdm.EdgeDriverManager"/>
+<fullyQualifiedTypeName name="genericCalls.GenCalls"/>
+<fullyQualifiedTypeName name="org.testng.annotations.AfterSuite"/>
+<fullyQualifiedTypeName name="org.testng.annotations.Parameters"/>
+<fullyQualifiedTypeName name="pageObjects.HomePageObjects"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
+<fullyQualifiedTypeName name="junit.framework.Assert"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.By.ByCssSelector"/>
 </qualifiedTypeNameHistroy>
