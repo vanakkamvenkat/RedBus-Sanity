@@ -1560,3 +1560,9 @@ java -ea -classpath V:\Venkat\eclipse-Neon\eclipse\plugins\org.testng.eclipse_6.
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2017-07-11 22:48:47.972
 !MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-07-11 23:00:41.442
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-07-11 23:00:41.444
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!

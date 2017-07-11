@@ -1,0 +1,25 @@
+package redbusWebsiteCalls;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
+
+public class HomePageCalls {
+  @Test (priority=0)
+  public void f() {
+	  for (int i = 0 ; i < 10 ; i++) {
+	  System.out.println("Hello World");
+	  System.out.println("Additional code");
+	  System.out.println("Third time");
+	  }  
+  }
+  
+  @BeforeSuite
+  public void before() {
+	  System.setProperty("webdriver.chrome.driver", ".\\Maven Dependencies\\selenium-chrome-driver-3.4.0.jar");
+	  WebDriver driver = new ChromeDriver();
+	  driver.get("http://www.google.com");
+  }
+}

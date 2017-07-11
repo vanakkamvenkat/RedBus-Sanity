@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Example test run]">
+  <parameter name="browser" value="firefox"/>
+  <test name="Simple Test(failed)">
+    <classes>
+      <class name="redbusWebsiteCalls.HomePageCalls">
+        <methods>
+          <include name="before"/>
+          <include name="homePageBusTicketLinkCheck"/>
+          <include name="homePageHotelLinkCheck"/>
+          <include name="after"/>
+          <include name="homePageBusHireLinkCheck"/>
+          <include name="homePagePilgrimageLinkCheck"/>
+        </methods>
+      </class> <!-- redbusWebsiteCalls.HomePageCalls -->
+    </classes>
+  </test> <!-- Simple Test(failed) -->
+</suite> <!-- Failed suite [Example test run] -->
