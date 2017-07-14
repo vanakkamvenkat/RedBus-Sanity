@@ -1,10 +1,14 @@
 package redbusWebsiteCalls;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -18,7 +22,7 @@ public class HomePageCalls extends GenCalls {
 	WebElement element;
 
 	/*	This method is to verify clicking on Hotel in HomePage is directing to respective page*/
-	@Test(priority = 0)
+	@Test(priority = 0, enabled = false)
 	public void homePageHotelLinkCheck() {
 		driver.get(hpo.baseURL);
 		element = driver.findElement(By.xpath(hpo.hotelLink));
@@ -27,7 +31,7 @@ public class HomePageCalls extends GenCalls {
 	}
 
 	/*	This method is to verify clicking on Bus Hire in HomePage is directing to respective page*/	
-	@Test(priority = 1)
+	@Test(priority = 1, enabled = false)
 	public void homePageBusHireLinkCheck() {
 		driver.get(hpo.baseURL);
 		element = driver.findElement(By.xpath(hpo.busHireLink));
@@ -36,7 +40,7 @@ public class HomePageCalls extends GenCalls {
 	}
 
 	/*	This method is to verify clicking on Pilgrimage in HomePage is directing to respective page*/		
-	@Test(priority = 2)
+	@Test(priority = 2, enabled = false)
 	public void homePagePilgrimageLinkCheck() {
 		driver.get(hpo.baseURL);
 		element = driver.findElement(By.xpath(hpo.pilgrimagesLink));
@@ -45,15 +49,58 @@ public class HomePageCalls extends GenCalls {
 	}
 
 	/*	This method is to verify clicking on Bus ticket in Pilgrimage Page is directing to Home page*/		
-	@Test(priority = 3)
+	@Test(priority = 3, enabled = false)
 	public void homePageBusTicketLinkCheck() {
 		driver.get(hpo.pilgrimageURL);
 		element = driver.findElement(By.xpath(hpo.busTicketLink));
 		element.click();
 		Assert.assertEquals(hpo.baseURL, driver.getCurrentUrl());
 	}
+	
+	/*	This method is to verify a simple bus ticket booking */		
+	@Test(priority = 4, enabled = true, dataProvider = "travelroute")
+	public void homePageBusTicketBookingCheck(String From, String To) throws InterruptedException {
+		driver.get(hpo.baseURL);
+		
+		element = elementbyxpath(hpo.busTicketFromTextBox);
+		element.sendKeys(From);
+		elementwait(5);
+		element.sendKeys(Keys.TAB);
+		
+		element = elementbyxpath(hpo.busTicketDestTextBox);
+		element.sendKeys(To);
+		elementwait(5);
+		element.sendKeys(Keys.TAB);
+		
+		element = elementbyxpath(hpo.busTicketFromCalendar);
+		
+		List<WebElement> allDates = element.findElements(By.tagName("td"));
+		
+		for(WebElement element:allDates)
+		{
+			String date=element.getAttribute("innerHTML");
+			
+			if(date.equalsIgnoreCase("16"))
+			{
+				element.click();
+				break;
+			}
+		}
+		
+		element = elementbyxpath(hpo.busTicketSubmitButton);
+		element.click();
+		elementwait(5);
+		Assert.assertEquals(driver.getTitle(), "Search Bus Tickets");
+	}
 
-
+	@DataProvider(name="travelroute") 
+    public Object[][] getDataFromDataprovider(){
+    return new Object[][] 
+    	{
+            { "Chennai", "Bengaluru" },
+        };
+	}
+	
 	/*	This method is to launch the browser to execute the various test cases*/
 	@Parameters("browser")
 	@BeforeSuite

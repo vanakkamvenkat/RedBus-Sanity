@@ -7,11 +7,8 @@
       <class name="redbusWebsiteCalls.HomePageCalls">
         <methods>
           <include name="before"/>
-          <include name="homePageBusTicketLinkCheck"/>
-          <include name="homePageHotelLinkCheck"/>
           <include name="after"/>
-          <include name="homePageBusHireLinkCheck"/>
-          <include name="homePagePilgrimageLinkCheck"/>
+          <include name="homePageBusTicketBookingCheck" invocation-numbers="0"/>
         </methods>
       </class> <!-- redbusWebsiteCalls.HomePageCalls -->
     </classes>

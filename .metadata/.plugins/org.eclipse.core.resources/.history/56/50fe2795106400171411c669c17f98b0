@@ -1,5 +1,0 @@
-package pageObjects;
-
-public class HomePageObjects {
-	public String baseURL = "https://www.redbus.in/";
-}

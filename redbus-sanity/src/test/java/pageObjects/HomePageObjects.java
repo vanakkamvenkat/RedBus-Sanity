@@ -13,4 +13,12 @@ public class HomePageObjects {
 	public String hotelLink = ".//*[@href='https://www.redbus.in/hotels/']";
 	public String busHireLink = ".//*[@href='https://www.redbus.in/bushire?utm_source=website&utm_medium=referral&utm_campaign=Homepage_bushire_banner']";
 	public String pilgrimagesLink = ".//*[@title='pilgrimages']";
+	
+	//Home Page - Bus ticket booking elements
+	public String busTicketFromTextBox = ".//*[@id='src']";
+	public String busTicketDestTextBox = ".//*[@id='dest']";
+	public String busTicketFromDateButton = ".//*[@id='onward_cal']";
+	public String busTicketFromCalendar = ".//*[@id='rb-calendar_onward_cal']/table";
+	public String busTicketSubmitButton = ".//button[@id='search_btn']";
+		
 }

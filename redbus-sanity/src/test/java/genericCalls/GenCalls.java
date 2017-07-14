@@ -45,5 +45,8 @@ public class GenCalls {
 		webelement = driver.findElement(By.cssSelector(locator));
 		return webelement;
 	}
-
-}
+	
+	public static void elementwait (int a) throws InterruptedException {
+		Thread.sleep(a*1000);
+	}
+ }
