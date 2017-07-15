@@ -98,6 +98,8 @@ public class HomePageCalls extends GenCalls {
     return new Object[][] 
     	{
             { "Chennai", "Bengaluru" },
+            { "Madurai", "Trivandrum" },
+            { "Mussoorie", "Kolkata" },
         };
 	}
 	
