@@ -1363,3 +1363,13 @@ org.eclipse.swt.SWTException: Widget is disposed
 2017-07-14 08:54:58,079 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2017-07-14 08:54:58,080 [Worker-59] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2017-07-14 08:54:58,081 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-07-15 08:25:09,051 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-15 08:25:09,084 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-07-15 08:25:09,092 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-15 08:25:09,094 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-07-15 08:25:16,866 [Worker-3] INFO  o.e.m.i.launch.MavenLaunchDelegate - V:\Venkat\1-Auto-E2E\RedBus-Sanity\redbus-sanity
+2017-07-15 08:25:16,867 [Worker-3] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B test
+2017-07-15 08:26:40,370 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-15 08:26:40,373 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-07-15 08:26:40,376 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-15 08:26:40,377 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
