@@ -1,8 +1,0 @@
-package pageObjects;
-
-public class HomePageObjects {
-	public String baseURL = "https://www.redbus.in/";
-	public String busTicketLinkCss = "a[class=selectedBus]";
-	public String hotelLinkXpath = ".//*[@href='https://www.redbus.in/hotels/']";
-		
-}

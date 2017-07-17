@@ -24,8 +24,8 @@ public class HomePageCalls extends GenCalls {
 	/*	This method is to verify clicking on Hotel in HomePage is directing to respective page*/
 	@Test(priority = 0, enabled = false)
 	public void homePageHotelLinkCheck() {
-		driver.get(hpo.baseURL);
-		element = driver.findElement(By.xpath(hpo.hotelLink));
+		openURL(hpo.baseURL);
+		element = elementbyxpath(hpo.hotelLink);
 		element.click();
 		Assert.assertEquals(hpo.hotelURL, driver.getCurrentUrl());
 	}
@@ -33,8 +33,8 @@ public class HomePageCalls extends GenCalls {
 	/*	This method is to verify clicking on Bus Hire in HomePage is directing to respective page*/	
 	@Test(priority = 1, enabled = false)
 	public void homePageBusHireLinkCheck() {
-		driver.get(hpo.baseURL);
-		element = driver.findElement(By.xpath(hpo.busHireLink));
+		openURL(hpo.baseURL);
+		element = elementbyxpath(hpo.busHireLink);
 		element.click();
 		Assert.assertEquals(hpo.busHireURL, driver.getCurrentUrl());
 	}
@@ -42,8 +42,8 @@ public class HomePageCalls extends GenCalls {
 	/*	This method is to verify clicking on Pilgrimage in HomePage is directing to respective page*/		
 	@Test(priority = 2, enabled = false)
 	public void homePagePilgrimageLinkCheck() {
-		driver.get(hpo.baseURL);
-		element = driver.findElement(By.xpath(hpo.pilgrimagesLink));
+		openURL(hpo.baseURL);
+		element = elementbyxpath(hpo.pilgrimagesLink);
 		element.click();
 		Assert.assertEquals(hpo.pilgrimageURL, driver.getCurrentUrl());
 	}
@@ -51,16 +51,16 @@ public class HomePageCalls extends GenCalls {
 	/*	This method is to verify clicking on Bus ticket in Pilgrimage Page is directing to Home page*/		
 	@Test(priority = 3, enabled = false)
 	public void homePageBusTicketLinkCheck() {
-		driver.get(hpo.pilgrimageURL);
-		element = driver.findElement(By.xpath(hpo.busTicketLink));
+		openURL(hpo.pilgrimageURL);
+		element = elementbyxpath(hpo.busTicketLink);
 		element.click();
 		Assert.assertEquals(hpo.baseURL, driver.getCurrentUrl());
 	}
 	
 	/*	This method is to verify a simple bus ticket booking */		
 	@Test(priority = 4, enabled = true, dataProvider = "travelroute")
-	public void homePageBusTicketBookingCheck(String From, String To) throws InterruptedException {
-		driver.get(hpo.baseURL);
+	public void homePageBusTicketBookingCheck(String From, String To, String ipdate) throws InterruptedException {
+		openURL(hpo.baseURL);
 		
 		element = elementbyxpath(hpo.busTicketFromTextBox);
 		element.sendKeys(From);
@@ -80,7 +80,7 @@ public class HomePageCalls extends GenCalls {
 		{
 			String date=element.getAttribute("innerHTML");
 			
-			if(date.equalsIgnoreCase("16"))
+			if(date.equalsIgnoreCase(ipdate))
 			{
 				element.click();
 				break;
@@ -97,9 +97,9 @@ public class HomePageCalls extends GenCalls {
     public Object[][] getDataFromDataprovider(){
     return new Object[][] 
     	{
-            { "Chennai", "Bengaluru" },
-            { "Madurai", "Trivandrum" },
-            { "Mussoorie", "Kolkata" },
+            { "Chennai", "Bengaluru", "17" },
+            { "Madurai", "Trivandrum", "18" },
+            { "Mussoorie", "Kolkata", "19" },
         };
 	}
 	

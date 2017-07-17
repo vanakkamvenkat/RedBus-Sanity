@@ -30,6 +30,10 @@ public class GenCalls {
 	public static void closebrowser() {
 		driver.close();
 	}
+	
+	public static void openURL(String url) 	{
+		driver.get(url);
+	}
 
 	public static WebElement elementbyxpath (String locator) {
 		webelement = driver.findElement(By.xpath(locator));
